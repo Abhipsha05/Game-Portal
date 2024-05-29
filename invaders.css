@@ -1,0 +1,61 @@
+body {
+    background: url("./assets/inavdersbg.jpg");
+    min-height: 100vh; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+    padding: 0; 
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 2.5rem; 
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+#board {
+    background-color: rgba(96, 6, 20, 0.841);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+}
+.exit-button {
+    position: absolute;
+    bottom: 10px;
+    right: 48%;
+    background-color: rgb(83, 2, 2);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.exit-button:hover {
+    background-color: darkred;
+}
+.hidden {
+    display: none;
+}
+
+#gameOverMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 130%;
+    font-family: 'Courier', monospace;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
