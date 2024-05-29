@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #efdee7;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #110101;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#opponent-section, #player-section {
+    border: 2px solid #4d0409;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 350px; /* Adjusted to match the image size */
+    background-color: #441416d0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#opponent-section h2, #player-section h2 {
+    margin: 10px 0;
+    color: #f2efef;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#opponent-choice, #your-choice {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #e8c9c9f7; 
+    margin-top: -18px; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#opponent-choice img, #your-choice img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#opponent-score, #your-score {
+    color: rgb(247, 221, 221); /* Changed score color to white */
+    margin-top: -43px; /* Reduced margin */
+    margin-left:43% ;
+}
+
+#choices {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#choices img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}

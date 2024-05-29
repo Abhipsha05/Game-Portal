@@ -1,0 +1,116 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
+    background-color: rgb(80, 4, 39);
+} 
+#logo{
+    width: 100px;
+    height: 100px;
+}
+#logo img{
+    width: 100%;
+}
+
+#name{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.Heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.sudoku_grid{
+    display: flex;
+    flex-direction: row;
+    max-width: 578px;
+    flex-wrap: wrap;
+
+    margin: 10px auto ;
+}
+
+.sudoku_grid div{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 60px;
+    height: 60px;
+    color: rgb(37, 11, 11);
+    font-size: 40px;
+
+    box-sizing: border-box;
+}
+
+.Buttons{   
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+    margin-bottom: 80px;
+}
+
+#GetPuzzle,#Solution{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #3a2b2b;
+    padding: 10px 35px;
+    font-size: 24px;
+    border: 1px solid #d3b3c3;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,.3);
+    margin-right: 10px;
+}
+
+.box1{
+    background-color: #f791b3a9;
+    border: 2px solid  white;
+}
+
+.box1:hover{
+    background-color: #f87fa1;
+    color: black;
+}
+
+.box2{
+    background-color: #db839ce3;
+    border: 2px solid  white;
+}
+.box2:hover{
+    background-color: rgb(189, 80, 106);
+}
+
+.box3{
+    background-color: #7d1d2b8c;
+    border: 2px solid  rgb(255, 255, 255);
+}
+.box3:hover{
+    background-color: #5d2626c8;
+    color: black
+}
+
+.bl{
+    border-left: 4px solid black;
+}
+
+.bb{
+    border-bottom: 4px solid black;
+}
+
+.br{
+    border-right: 4px solid black;
+}
+
+.bt{
+    border-top: 4px solid black;
+}
