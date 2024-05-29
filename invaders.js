@@ -1,33 +1,27 @@
 const gameLoopSound = new Audio('./assets/gameloop.mp3');
 gameLoopSound.loop = true;
-gameLoopSound.volume = 1; // Adjust volume as needed
+gameLoopSound.volume = 1;
 gameLoopSound.play();
-
 //board
 let tileSize = 32;
 let rows = 16;
 let columns = 16;
-
 let board;
-let boardWidth = tileSize * columns; // 32 * 16
-let boardHeight = tileSize * rows; // 32 * 16
+let boardWidth = tileSize * columns; 
+let boardHeight = tileSize * rows; 
 let context;
-
 //ship
 let shipWidth = tileSize * 2;
 let shipHeight = tileSize;
 let shipX = tileSize * columns / 2 - tileSize;
 let shipY = tileSize * rows - tileSize * 2;
-
 let ship = {
     x: shipX,
     y: shipY,
     width: shipWidth,
     height: shipHeight
 }
-
 let shipVelocityX = tileSize; //ship moving speed
-
 //aliens
 let alienArray = [];
 let alienWidth = tileSize * 2;
@@ -35,18 +29,15 @@ let alienHeight = tileSize;
 let alienX = tileSize;
 let alienY = tileSize;
 let alienImg;
-
 let alienRows = 2;
 let alienColumns = 3;
 let alienCount = 0; //number of aliens to defeat
 let alienVelocityX = 4; //alien moving speed
-
 //bullets
 let bulletArray = [];
 let bulletVelocityY = -10; //bullet moving speed
 let gameOverSoundPlayed = false;
 const gameoversound = new Audio('assets/gameover2.mp3')
-
 let score = 0;
 let gameOver = false;
 const shootingsound = new Audio('./assets/shootsound.mp3');
@@ -79,7 +70,7 @@ function drawShip() {
     let shooterWidth = ship.width / 4;
     let shooterHeight = ship.height / 2;
     let shooterX = ship.x + ship.width / 2 - shooterWidth / 2;
-    let shooterY = ship.y - shooterHeight; // Positioning it on top of the ship
+    let shooterY = ship.y - shooterHeight;
 
     context.fillStyle = "orange";
     context.fillRect(shooterX, shooterY, shooterWidth, shooterHeight);
@@ -95,7 +86,7 @@ function update() {
             gameOverSoundPlayed = true;
         }
 
-        gameOverMessage.classList.remove('hidden'); // Show the game over message
+        gameOverMessage.classList.remove('hidden');
 
         document.addEventListener("keydown", restartGame);
         return;
@@ -242,10 +233,8 @@ function restartGame() {
             bulletArray = [];
             createAliens();
             gameOverSoundPlayed = false; 
-            gameLoopSound.play(); 
-        
+            gameLoopSound.play();    
     }
-
 }
   
 
