@@ -1,6 +1,7 @@
 const gameLoopSound = new Audio('./assets/musicloop.mp3');
 gameLoopSound.loop = true;
 gameLoopSound.volume = 0.5; 
+gameLoopSound.play();
 
 //board
 let tileSize = 32;
