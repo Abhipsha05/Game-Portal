@@ -1,11 +1,11 @@
 const gameLoopSound = new Audio('./assets/musicloop.mp3');
 gameLoopSound.loop = true;
 gameLoopSound.volume = 0.5; 
+
 //board
 let tileSize = 32;
 let rows = 16;
 let columns = 16;
-
 let board;
 let boardWidth = tileSize * columns; // 32 * 16
 let boardHeight = tileSize * rows; 
@@ -16,14 +16,12 @@ let shipWidth = tileSize * 2;
 let shipHeight = tileSize;
 let shipX = tileSize * columns / 2 - tileSize;
 let shipY = tileSize * rows - tileSize * 2;
-
 let ship = {
     x: shipX,
     y: shipY,
     width: shipWidth,
     height: shipHeight
 }
-
 let shipVelocityX = tileSize; 
 
 //aliens
@@ -33,7 +31,6 @@ let alienHeight = tileSize;
 let alienX = tileSize;
 let alienY = tileSize;
 let alienImg;
-
 let alienRows = 2;
 let alienColumns = 3;
 let alienCount = 0; //number of aliens to defeat
@@ -44,13 +41,13 @@ let bulletArray = [];
 let bulletVelocityY = -10; //bullet moving speed
 let gameOverSoundPlayed = false;
 const gameoversound = new Audio('assets/gameover2.mp3')
-
 let score = 0;
 let gameOver = false;
 const shootingsound = new Audio('./assets/shootsound.mp3');
 shootingsound.playbackRate = 1.5;
 
 window.onload = function () {
+    alert(`Hint: press space key to shoot the aliens!`);
     gameLoopSound.play(); 
     board = document.getElementById("board");
     board.width = boardWidth;
