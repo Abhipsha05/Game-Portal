@@ -1,7 +1,6 @@
 const gameLoopSound = new Audio('./assets/musicloop.mp3');
 gameLoopSound.loop = true;
 gameLoopSound.volume = 0.5; 
-gameLoopSound.play();
 
 //board
 let tileSize = 32;
@@ -86,6 +85,7 @@ function drawShip() {
 }
 
 function update() {
+    gameLoopSound.play();
     requestAnimationFrame(update);
 
     if (gameOver) {
