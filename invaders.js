@@ -1,8 +1,6 @@
 const gameLoopSound = new Audio('./assets/musicloop.mp3');
 gameLoopSound.loop = true;
 gameLoopSound.volume = 0.5; 
-gameLoopSound.play();
-
 //board
 let tileSize = 32;
 let rows = 16;
@@ -53,6 +51,7 @@ const shootingsound = new Audio('./assets/shootsound.mp3');
 shootingsound.playbackRate = 1.5;
 
 window.onload = function () {
+    gameLoopSound.play(); 
     board = document.getElementById("board");
     board.width = boardWidth;
     board.height = boardHeight;
@@ -86,7 +85,6 @@ function drawShip() {
 }
 
 function update() {
-    gameLoopSound.play();
     requestAnimationFrame(update);
 
     if (gameOver) {
