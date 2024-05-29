@@ -3,6 +3,9 @@ let player = 'X';
 let gameEnded = false;
 const movingsound = new Audio('assets/move.mp3');
 const winsound = new Audio('assets/win.wav');
+const gameLoopSound = new Audio('./assets/musicloop.mp3');
+gameLoopSound.loop = true;
+gameLoopSound.volume = 0.5;
 
 
 function displayBoard() {
@@ -74,5 +77,6 @@ function resetGame() {
 
 // Initialize the game
 displayBoard();
+gameLoopSound.play();
 
 
