@@ -1,3 +1,7 @@
+const gameLoopSound = new Audio('./assets/musicloop.mp3');
+gameLoopSound.loop = true;
+gameLoopSound.volume = 0.5;
+gameLoopSound.play();
 var arr = [[], [], [], [], [], [], [], [], []];
 
 for (var i = 0; i < 9; i++) {
@@ -124,3 +128,4 @@ function sudokusolver(board, i, j, n) {
     }
     return false;
 }
+
