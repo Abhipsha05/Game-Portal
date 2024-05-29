@@ -3,7 +3,10 @@ var yourScore = 0;
 var opponent; // Opponent's choice
 var opponentScore = 0;
 const winsound = new Audio('assets/win.wav');
-
+const gameLoopSound = new Audio('./assets/musicloop.mp3');
+gameLoopSound.loop = true;
+gameLoopSound.volume = 0.5;
+gameLoopSound.play();
 var choices = ["rockk", "paperr", "scissorr"];
 
 // When the page loads, populate the choices div with images
